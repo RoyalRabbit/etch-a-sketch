@@ -20,7 +20,7 @@ body {
 .grid-container {
     display: flex;
     
-    border: solid 1px red;
+    border: solid 3px rgb(0, 0, 0);
     width: 75rem;
     height: 75rem;
     justify-content: space-around;
