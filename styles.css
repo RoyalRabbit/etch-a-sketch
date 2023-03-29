@@ -9,9 +9,9 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height: 130vh;
+    height: 120vh;
     width: 100%;
     margin: 0;
 
@@ -38,6 +38,7 @@ body {
     display: flex;
     width: 80rem;
     justify-content: space-around;
+    margin-top: 2.5rem;
 }
 
 button {
