@@ -28,6 +28,18 @@ for (let i = 0; i <squares; i++) {
     gridContainer.appendChild(grid);
 }
 
+// Select all grid elements
+const gridAll = document.querySelectorAll('.grid');
+
+
+// Reset Button
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', ()=> {
+    gridAll.forEach(obj=>{
+        // Sets background color to none
+        obj.style.backgroundColor=''
+    })
+})
 
 
 
@@ -36,10 +48,6 @@ function changeBackgroundRandom(obj) {
     obj.target.style.backgroundColor = createRandomColor()
 }
 
-// Reset background color styling to white
-function changeBackgroundWhite(obj) {
-    obj.target.style.backgroundColor = ''
-}
 // Generates a random color styling
 function createRandomColor() {
     return `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`

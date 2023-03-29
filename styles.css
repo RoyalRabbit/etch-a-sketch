@@ -46,3 +46,7 @@ button {
     padding: 3rem;
 
 }
+
+button:hover {
+    cursor: pointer;
+}
