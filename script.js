@@ -19,6 +19,27 @@ for (let i = 0; i <squares; i++) {
 }
 
 document.querySelector('.grid').addEventListener('mouseover',(obj)=>{
-    obj.target.classList.add('hover');
-    setTimeout(()=>{obj.target.classList.remove('hover');}, 300);
+    obj.target.classList.add('hovered');
+    const hovered = document.querySelector('.hovered');
+    hovered.style.backgroundColor = `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`;
+    // setTimeout((),300);
+    // setTimeout(()=>{obj.target.classList.remove('hover');}, 300);
 })
+
+document.querySelector('.grid').addEventListener('mouseout',(obj)=>{
+
+    // obj.target.classList.remove('hover');
+    setTimeout(()=>{
+        const hovered = document.querySelector('.hovered');
+    hovered.style.backgroundColor = `white`;
+        obj.target.classList.remove('hovered');
+    }, 300);
+})
+
+
+
+
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }

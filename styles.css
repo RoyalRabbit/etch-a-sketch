@@ -31,10 +31,14 @@ body {
 .grid {
     /* height: 10rem;
     width: 10rem; */
-    border: solid 0.1rem red;
-    transition: 0.5s;
+    border: solid 0.1rem rgb(255, 0, 0);
+    transition: 0.3s;
 }
 
-.hover {
+/* .hovered {
     background-color: blue;
-}
+} */
+
+/* .grid:hover {
+    background-color: blue;
+} */
