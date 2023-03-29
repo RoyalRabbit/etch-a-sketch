@@ -30,7 +30,7 @@ body {
 }
 
 .grid {
-    border: solid 0.1rem rgb(255, 0, 0);
+    border: solid 0.1rem rgb(0, 0, 0);
     transition: 0.5s;
 }
 
