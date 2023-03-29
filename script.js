@@ -16,31 +16,18 @@ const squareLength = gridWidth / (squaresInRow + 0.3);
 for (let i = 0; i <squares; i++) {
     const grid = document.createElement('div')
     grid.className='grid'
+
+    // Add event listener to each grid that was created
     grid.addEventListener('mouseover', obj=>{
         changeBackgroundRandom(obj);
     })
+
+    // Set width and height of the squares of each grid
     grid.style.width = `${squareLength}px`;
     grid.style.height = `${squareLength}px`;
     gridContainer.appendChild(grid);
 }
 
-// Select all grids
-
-// let gridAll = document.querySelectorAll('.grid');
-
-// // Put event listener on each item in gridAll
-// gridAll.forEach(item=>{
-//     // Mouse over event
-//     item.addEventListener('mouseover', obj=>{
-//         changeBackgroundRandom(obj);
-//     })
-
-    // Mouse out event
-    // item.addEventListener('mouseout', obj=> {
-    //     changeBackgroundWhite(obj)
-    //     console.log(obj)
-    // })
-// })
 
 
 
