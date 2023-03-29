@@ -46,6 +46,13 @@ reset.addEventListener('click', ()=> {
     })
 })
 
+// Row Generation button
+const generateRow = document.querySelector('.change-row');
+generateRow.addEventListener('click', ()=>{
+    removeGrid();
+    // createGrid(prompt('Type number of squares in row')) Finish at home. Probably need to add squarelenght and square sin a function to call from and have createGrid() just call for how many squares
+})
+
 
 // Set background color styling
 function changeBackgroundRandom(obj) {
@@ -63,7 +70,7 @@ function getRandomInt(max) {
   }
 
 // Remove grid
-function removeGrid(container) {
+function removeGrid() {
     const gridAll = document.querySelectorAll('.grid'); 
     gridAll.forEach(obj=>{
         gridContainer.removeChild(obj)
