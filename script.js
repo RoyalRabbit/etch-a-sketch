@@ -20,7 +20,10 @@ function createGrid(squares, squareLength){
     for (let i = 0; i <squares; i++) {
         const grid = document.createElement('div')
         grid.className='grid'
-        
+
+
+        // Set grid opacity property to 0
+        grid.opacity=0
 
         // Add event listener to each grid that was created
         grid.addEventListener('mouseover', obj=>{
@@ -42,8 +45,10 @@ reset.addEventListener('click', ()=> {
     // Select all grid elements
     const gridAll = document.querySelectorAll('.grid');
     gridAll.forEach(obj=>{
-        // Sets background color to none
+        // Sets background color to none and resets opacity
         obj.style.backgroundColor=''
+        obj.opacity=0
+        obj.style.opacity='1'
     })
 })
 
@@ -58,7 +63,16 @@ generateRow.addEventListener('click', ()=>{
 // Set background color styling
 function changeBackgroundRandom(obj) {
     obj.target.style.backgroundColor = createRandomColor();
-    obj.target.style.transition = 'background-color 0.5s ease-in-out';
+    obj.target.style.opacity = '1'
+    obj.target.style.transition = '0.4s ease-out';
+    setTimeout(() => {
+	    obj.target.style.backgroundColor = 'black';
+        if (obj.target.opacity<1) {
+           obj.target.opacity += 0.1
+        }
+	    obj.target.style.opacity = `${obj.target.opacity}`;
+        obj.target.style.transition = '';
+	  }, 400);
 
 
 }

@@ -30,7 +30,8 @@ body {
 }
 
 .grid {
-    border: solid 0.1rem rgb(0, 0, 0);
+    background-color: #f0f0f0;
+	transition: background-color 0.5s ease-in-out;
 }
 
 .btn-container {
