@@ -114,8 +114,8 @@ function removeGrid() {
 // Function that asks users for a valid number
 function getValidNumber() {
     let num = NaN;
-    while (isNaN(num)) {
-      num = Number(prompt("Enter number of squares you want in a row"));
+    while (isNaN(num) || num < 1 || num > 100) {
+      num = Number(prompt("Enter number of squares (1-100) you want in a row"));
     }
     return num;
   }
