@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover Effect</title>
+	<style type="text/css">
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 10px;
+		}
+		.box {
+			height: 100px;
+			background-color: #ccc;
+			transition: background-color 0.5s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<div class="grid">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+
+<script type="text/javascript">
+	const boxes = document.querySelectorAll('.box');
+	
+	function changeColor() {
+	  this.style.backgroundColor = 'red';
+	  this.style.opacity = '0.5';
+	  this.style.transition = 'background-color 0.5s ease-in-out';
+	  setTimeout(() => {
+	    this.style.backgroundColor = '#ccc';
+	    this.style.opacity = '1';
+	  }, 500);
+	}
+	
+	boxes.forEach(box => box.addEventListener('mouseover', changeColor));
+</script>
+
+</body>
+</html>
