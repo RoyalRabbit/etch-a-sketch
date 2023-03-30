@@ -3,13 +3,17 @@ console.log(gridContainer)
 
 
 const gridWidth = gridContainer.clientWidth
+const gridHeight = gridContainer.clientHeight
+console.log(gridWidth)
+console.log(gridHeight)
 
 // Calculate how many grid squares need to be created
-let squaresInRow = 5
+let squaresInRow = 20
 let squares = squaresInRow**2
 
 //Calculate dimensions of squares
-const squareLength = gridWidth / (squaresInRow + 0.3);
+const squareLength = (gridWidth) / (squaresInRow);
+console.log(squareLength)
 
 // Initialize Grid with 64x64 grid
 createGrid(squares,squareLength)
