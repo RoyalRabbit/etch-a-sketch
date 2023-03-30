@@ -1,19 +1,17 @@
 const gridContainer = document.querySelector('.grid-container');
 console.log(gridContainer)
 
-
+// Get width and length of the grid container
 const gridWidth = gridContainer.clientWidth
 const gridHeight = gridContainer.clientHeight
-console.log(gridWidth)
-console.log(gridHeight)
+
 
 // Calculate how many grid squares need to be created
 let squaresInRow = 20
 let squares = squaresInRow**2
 
 //Calculate dimensions of squares
-const squareLength = (gridWidth) / (squaresInRow);
-console.log(squareLength)
+let squareLength = (gridWidth) / (squaresInRow);
 
 // Initialize Grid with 64x64 grid
 createGrid(squares,squareLength)
@@ -59,7 +57,20 @@ reset.addEventListener('click', ()=> {
 // Row Generation button
 const generateRow = document.querySelector('.change-row');
 generateRow.addEventListener('click', ()=>{
+    let squaresNumber = getValidNumber()
+
+    // Calculate how many grid squares need to be created
+    let squaresInRow = squaresNumber
+    let squares = squaresInRow**2
+
+    //Calculate dimensions of squares
+    let squareLength = (gridWidth) / (squaresInRow);
+
     removeGrid();
+    //Create grid
+    createGrid(squares, squareLength)
+    
+
     // createGrid(prompt('Type number of squares in row')) Finish at home. Probably need to add squarelenght and square sin a function to call from and have createGrid() just call for how many squares
 })
 
@@ -100,3 +111,11 @@ function removeGrid() {
     })
 }
 
+// Function that asks users for a valid number
+function getValidNumber() {
+    let num = NaN;
+    while (isNaN(num)) {
+      num = Number(prompt("Enter number of squares you want in a row"));
+    }
+    return num;
+  }
