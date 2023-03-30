@@ -5,7 +5,7 @@ console.log(gridContainer)
 const gridWidth = gridContainer.clientWidth
 
 // Calculate how many grid squares need to be created
-let squaresInRow = 64
+let squaresInRow = 5
 let squares = squaresInRow**2
 
 //Calculate dimensions of squares
@@ -20,6 +20,7 @@ function createGrid(squares, squareLength){
     for (let i = 0; i <squares; i++) {
         const grid = document.createElement('div')
         grid.className='grid'
+        
 
         // Add event listener to each grid that was created
         grid.addEventListener('mouseover', obj=>{
@@ -56,7 +57,10 @@ generateRow.addEventListener('click', ()=>{
 
 // Set background color styling
 function changeBackgroundRandom(obj) {
-    obj.target.style.backgroundColor = createRandomColor()
+    obj.target.style.backgroundColor = createRandomColor();
+    obj.target.style.transition = 'background-color 0.5s ease-in-out';
+
+
 }
 
 // Generates a random color styling

@@ -31,7 +31,6 @@ body {
 
 .grid {
     border: solid 0.1rem rgb(0, 0, 0);
-    transition: 0.5s;
 }
 
 .btn-container {
